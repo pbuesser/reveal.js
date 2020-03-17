@@ -1,0 +1,54 @@
+/**
+ * my custom tags
+ * Author: Pierre Buesser
+ */
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+/**
+ * Custom tags to add color and font easily by Pierre Buesser
+ */
+
+/*********************************************
+ * CUSTOM TAGS, to add colors and courier font easily
+ *********************************************/
+red{color: red}
+		blue{color: blue}
+		green{color: green}
+		tomato{color: tomato}
+		cr{color: red; font-family: "courier"}
+		cb{color: blue; font-family: "courier"}
+		cg{color: green; font-family: "courier"}
+		cdb{color: darkblue; font-family: "courier"}
+		ctomato{color: tomato;  font-family: "courier"}
+/* 		mycode est supposé garder la couleur de base: */
+		mycode{font-family: "courier"; text-align: "left"}
+		
+		big{font-size: 200%;}
+		big2{font-size: 400%;}
+				
+/*********************************************
+ * POSITION class, to place an image far on the right
+ *********************************************/			
+		/*  right text */
+.my-right {
+  position: relative;
+/*   top: 1px; */
+  right: -100px;
+}
+
+.align-left {
+text-align: left;
+}
+
+/*********************************************
+ * attributs custom des paragraphes utilisation : class="taille150" etc
+ *********************************************/		
+p.taille150{font-size: 150%}
+p.taille130 {font-size: 130%}
+p.taille100{font-size: 100%}
+p.taille75{font-size: 75%}
+p.taille50{font-size: 50%}
+
+p.taille12pt{font-size: 12pt;}
+p.taille50px {font-size: 50px;}
+p.taille2mm{font-size: 2mm;}

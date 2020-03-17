@@ -24,6 +24,10 @@ body {
   background-color: #fff;
   color: #000; }
 
+
+
+
+
 /*********************************************
  * VIEW FRAGMENTS
  *********************************************/
@@ -1415,7 +1419,9 @@ body {
   width: 200px;
   padding: 14px;
   border: 1px solid #fff;
-  vertical-align: middle; }
+  vertical-align: middle;
+
+   }
 
 .reveal > .overlay.overlay-help .viewport .viewport-inner table th {
   padding-top: 20px;
@@ -1604,3 +1610,46 @@ body {
 
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
+
+/*********************************************
+ * Table add P.Buess
+ *********************************************/
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+  vertical-align: middle; 
+}
+
+
+/*********************************************
+ * Images P.Buess
+ *********************************************/
+/*  fonctionne pas !*/
+ 
+ .reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid #657b83;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+ 
+/* 
+.reveal img {
+  border: 0px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+ */
+

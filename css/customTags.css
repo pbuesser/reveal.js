@@ -30,19 +30,48 @@ red{color: red}
  * POSITION class, to place an image far on the right
  *********************************************/			
 		/*  right text */
+		
+.my-left {
+display:inline-block;
+ z-index: 6;
+}		
+		
 .my-right {
   position: relative;
-/*   top: 1px; */
-  right: -100px;
+  z-index: 2;
+   top: -20px; 
+  right: -10px; /* -100 */
+ 
+/*    height: 150px; */
+/*    width: 150px; */  
+display:inline-block;
+
 }
+
+
+
 
 .align-left {
 text-align: left;
 }
 
+
+
+
+
+/*********************************************
+ * SIZE class, to change size of any tag
+ *********************************************/
+.taille150{font-size: 150%}
+.taille130 {font-size: 130%}
+.taille100{font-size: 100%}
+.taille75{font-size: 75%}
+.taille50{font-size: 50%}
+
+
 /*********************************************
  * attributs custom des paragraphes utilisation : class="taille150" etc
- *********************************************/		
+ *********************************************/		 
 p.taille150{font-size: 150%}
 p.taille130 {font-size: 130%}
 p.taille100{font-size: 100%}
@@ -52,3 +81,7 @@ p.taille50{font-size: 50%}
 p.taille12pt{font-size: 12pt;}
 p.taille50px {font-size: 50px;}
 p.taille2mm{font-size: 2mm;}
+
+
+
+

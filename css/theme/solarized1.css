@@ -159,7 +159,7 @@ red{color: red}
   display: block;
   position: relative;
   width: 100%;
-  margin: 20px auto;
+  margin: 10px auto; /* 20 */
   text-align: left;
   font-size: 0.55em;
   font-family: monospace;
@@ -174,10 +174,14 @@ red{color: red}
 .reveal pre code {
   display: block;
   padding: 5px;
-  overflow: auto;
+  /* overflow: auto; */ /* Ca créait des masquage de code à l'impression! */
+ overflow-x: visible; /* pour forcer d'afficher le code meme en dehors des espaces */
+  overflow-y: visible;
   max-height: 550px;
 /*   max-width: 1000px; */
-  word-wrap: normal; }
+  word-wrap: normal;
+
+   }
 
 .reveal table {
   margin: auto;
@@ -245,7 +249,7 @@ red{color: red}
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
+  margin: 10px 0px; /* 15px 0px */
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid #657b83;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }

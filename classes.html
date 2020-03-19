@@ -1,0 +1,1067 @@
+<!doctype html>
+<html>
+	<head>
+		<!-- pBuess My personnal tags:--><!-- font-family: "Lato", sans-serif; font-size: 40px; font-weight: normal; color: #657b83 -->
+	<style>
+		
+	</style>
+<meta name="description" content="Python slides">
+		<meta name="author" content="Pierre Buesser">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<meta charset="utf-8">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+		
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<!-- Themes : my custom tags  <red> <blue> etc -->
+		<link rel="stylesheet" href="css/customTags.css">
+		<!-- Themes : solarized1: my personnal version of solarized -->
+		<link rel="stylesheet" href="css/theme/solarized1.css" id="theme">
+		<!-- Themes : Black White League Sky Beige Simple Serif Blood Night Moon Solarized-->
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/vs.css"> 
+		<!-- choice: monokai, zenburn, arduino-light, arta,ascetic, gruvbox-light,isbl-editor-light, xcode, vs //Atelier Cave Light, Atelier Dune Light-->
+		<!--more at highlight.js -->
+
+
+<!--   <script src="plugin/sculpt-master/js/sculpt.js" type="text/javascript"></script> -->
+		
+		<!-- <script src="js/skulpt.min.js" type="text/javascript"></script>-->
+
+		<!-- Printing and PDF exports -->
+		<script>
+	
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );	
+		</script>
+	<!-- ************************skulpt************************************ -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>  -->
+<script src="http://www.skulpt.org/js/skulpt.min.js" type="text/javascript"></script> 
+<script src="http://www.skulpt.org/js/skulpt-stdlib.js" type="text/javascript"></script> 
+	<!-- ************************skulpt************************************ -->	  
+	  
+	</head>
+	
+	
+	<body>
+	
+	
+	<!-- ************************skulpt************************************ -->
+	
+<!-- 
+	<script type="text/javascript"> 
+// output functions are configurable.  This one just appends some text
+// to a pre element.
+function outf(text) { 
+    var mypre = document.getElementById("output"); 
+    mypre.innerHTML = mypre.innerHTML + text; 
+} 
+function builtinRead(x) {
+    if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+    return Sk.builtinFiles["files"][x];
+}
+
+// Here's everything you need to run a python program in skulpt
+// grab the code from your textarea
+// get a reference to your pre element for output
+// configure the output function
+// call Sk.importMainWithBody()
+
+function runit() { 
+   var prog = document.getElementById("yourcode").value; 
+   var mypre = document.getElementById("output"); 
+   mypre.innerHTML = ''; 
+   Sk.pre = "output";
+   Sk.configure({output:outf, read:builtinRead}); 
+   (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+   var myPromise = Sk.misceval.asyncToPromise(function() {
+       return Sk.importMainWithBody("<stdin>", false, prog, true);
+   });
+   myPromise.then(function(mod) {
+       console.log('success');
+   },
+       function(err) {
+       console.log(err.toString());
+   });
+}
+
+
+function outf2(text) { 
+    var mypre = document.getElementById("output2"); 
+    mypre.innerHTML = mypre.innerHTML + text; 
+} 
+function runit2() { 
+   var prog = document.getElementById("yourcode2").value; 
+   var mypre = document.getElementById("output2"); 
+   mypre.innerHTML = ''; 
+   Sk.pre = "output2";
+   Sk.configure({output:outf2, read:builtinRead}); 
+   // (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+   var myPromise = Sk.misceval.asyncToPromise(function() {
+       return Sk.importMainWithBody("<stdin>", false, prog, true);
+   });
+   myPromise.then(function(mod) {
+       console.log('success');
+   },
+       function(err) {
+       console.log(err.toString());
+   });
+}
+
+</script> 
+ -->
+	
+	<!-- ************************skulpt************************************ -->
+	
+	
+	
+	
+	
+		<div class="reveal">
+			<div class="slides">
+			
+<!-- ************************skulpt slide************************************ -->			
+<!-- 
+		<section>
+		<form>
+<textarea id="yourcode2" cols="40" rows="4" style="font-size:0.8em">
+print 2*3
+</textarea>
+<br/>
+<button type = "button" onclick="runit2()" >Run</button>
+<!~~ <button onclick="clear_output();" class="btn btn-danger large">Clear</button> ~~>
+</form> 
+<pre id="output2" style="height:200px; scroll: true">
+</pre>
+</section>
+
+<section>			
+<h4>Try This</h4> 
+<form> 
+<textarea id="yourcode" cols="40" rows="5">
+import turtle
+t = turtle.Turtle()
+t.forward(100)
+print "Hello World" 
+</textarea><br /> 
+<button type="button" onclick="runit()">Run</button> 
+</form> 
+<pre id="output" ></pre> 
+<!~~ If you want turtle graphics include a canvas ~~>
+<div id="mycanvas"></div> 
+</section>	
+ -->
+<!-- ************************skulpt slide************************************ -->				
+		<!-- ------------------------------------------------------------------------------------ -->
+			<section>
+
+			<h1>Suite du cours online</h1>
+					<p>
+						<small> P. Buesser</small>
+					</p>
+				</section>
+		<!-- ------------------------------------------------------------------------------------ -->
+			<section>
+
+					<section id = "niveau0">
+						<p>Les slides verticaux contiennent des commentaires et additions sur un même slide.
+						 Vous pouvez y accédez avec les flèches de navigation</p>
+						<br>
+						<a href="#niveau1" >
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
+						</a>
+					</section>
+					<section id = "niveau1">
+						<h2>Niveau 1</h2>
+						<p>Utiliser <em>la barre d'espace</em> pour naviguer à travers tout les slides.</p>
+						<p>Pressez la touche  <em>ESC</em> pour avoir une vue générale des slides.</p>
+						
+					</section>
+					<section>
+						<h2>Niveau 3</h2>
+						<ul>
+						<li>Des données du web peuvent être intégrées, il est donc possible que certains slides apparaissent différemment sans connection.</li>
+						<!-- <li>Après des changements (p. ex connection internet) vous pouvez rafraichir &#10227; la page pour voir les changements.</li> -->
+						<li>Possible de copier-coller les sections de code sans problèmes de tabulations</li>
+					</section>
+					<section>
+						<h2>Niveau 4</h2>
+						<ul>
+ 						<li>Pour zoomer : maintenez <em>alt</em> (<em>ctrl</em> sous Linux)et cliquez sur un élément. Cliquez encore une fois pour revenir.</li>
+						<li>Le texte contient des hyperliens vers des autres slides.</li>
+						<li>Pour revenir après avoir cliqué sur un de ces liens, utilisez les flèches de navigation du browser (Firefox, etc).</li>
+					</section>
+					<section>
+					</ul>
+						<br>
+						<a href="#niveau0"> Retour au slide principal.</a>
+					</section>
+					
+				</section>
+				<!-- ------------------------------------------------------------------------------------ -->
+			<section>
+				<section>
+				<h3>3.16 – Destruction des instances </h3>
+				<small>(slide 41 des anciennes slides)</small>
+				<p>
+				<cr>del</cr> <cg>monObjet</cg>
+				</p>
+				<p>
+				La destruction d’une instance provoque 
+				un appel au destructeur de la classe <cr>__del__(self)</cr>,
+				la restitution de l’espace mémoire et la 
+				suppression de la variable <cr>monObjet</cr>
+				</p>
+				</section>
+				<section>
+				<table>
+  				<tr >
+  					<td ><red><big2 >&#9888;</big2></red> </td>
+    				<td >Le destructeur réalise le travail inverse du constructeur. 
+						En général, Python se débrouille très bien tout seul pour effacer automatiquement 
+						tout les objets inatteignables à l'aide du collecteur de déchets (garbage collector).</td>
+  				</tr>
+  				
+  				</table>
+				</section>
+				
+				
+				</section>
+				<!-- ------------------------------------------------------------------------------------ -->
+				<section>
+				<section id = "classFigure">
+				<img src="images/umlFigure.png" alt="UML Figure" width="200"  align="right" class="my-right">
+				<h3>3.16 – Destruction des instances: <a href = "#del"><mycode>del</mycode></a>	</h3>
+<!-- 				les parametre de l'image se trouve dans les themes css -->
+
+
+				<!--"9|9,10" pour eclairer par steps-->
+				<pre ><code class="python" data-trim data-line-numbers="9,10" >
+class Figure() :
+	compteur = 0
+	
+	def __init__(self, largeur, hauteur) :
+		self.nom = ''
+		self.largeur = largeur
+		self.hauteur = hauteur
+		Figure.compteur += 1
+	def __del__(self) :
+		Figure.compteur -= 1
+
+	@staticmethod
+	def nombreinstances() :
+		return Figure.compteur
+				
+					</code></pre>
+					</section>
+					<section id = "del">
+  On a modifié la fonction <cr>__del__(self)</cr> par défaut de la classe <cg>Figure</cg> pour qu'elle diminue
+  le compteur de 1 à chaque fois qu'on efface une instance. <br />
+  Notez aussi <red>la méthode de classe</red> <cdb>nombreinstances()</cdb> 
+  (-> elle peut être appelée à partir du nom de la classe : <cdb>nomClasse.fonction()</cdb>).
+  
+					</section>
+					</section>
+				<!-- ------------------------------------------------------------------------------------ -->
+				<section>
+				<section>				
+				<h3>3.16 – Destruction des instances: del</h3>
+				
+				<pre><code class="python" data-trim data-line-numbers="1,2">
+				rect = Rectangle(4, 5)
+				del rect
+				</code></pre>
+				<p style="margin-bottom:10px"></p>
+				<img src="images/memoireRect.png" alt="UML Figure" width="600"  align="center" >
+				</section>				
+				<section>
+<cr>del</cr><cb> rect</cb> supprime la variable <cb>rect</cb> et l'objet en mémoire devient inatteignable.
+				</section>
+				
+				</section>
+<!-- ------------------------------------------------------------------------------------ -->
+				<section>
+				<section>
+				<h3>3.16 – Destruction des instances: del</h3>
+<pre><code class="python" data-trim data-line-numbers>
+from figures import *               # importe figures.py
+print Figure.nombreinstances()      # méthode de classe
+#->0	
+rect = Rectangle(4, 5)              # appel au constructeur
+print rect.perimetre()
+#->18.0
+print Figure.nombreinstances()
+#->1
+cercle = Cercle(5)                  # appel au constructeur
+cercle.perimetre()                  # polymorphisme :-)
+#->31.4159265359
+print Figure.nombreinstances()
+#->2
+del rect                            # appel au destructeur
+print Figure.nombreinstances()
+#->1
+rect
+#->NameError: name 'rect' is not defined
+</code></pre>
+				</section>
+				<section>
+On utilise la fonction <cdb>nombreinstances()</cdb>( définie <a href = "#classFigure">avant</a>) 
+pour afficher le nombre d'instances de la classe figure. L'opérateur <cdb>del</cdb> (ligne 14) a appelé la fonction
+<cdb>__del__(self)</cdb> qui a bien diminué le nombre d'instances. A la ligne 17
+l'appel de la variable <cdb>rect</cdb> qui n'existe plus
+génère une erreur.
+				</section>
+				</section>
+<!-- ------------------------------------------------------------------------------------ -->				
+				<section>
+				<section>
+				<h3>3.17 – Garbage collector : 
+	     le ramasse-miette</h3>
+<p class = taille75>
+Python gère la mémoire avec un garbage collector qui
+recycle automatiquement la mémoire qui n’est plus utilisée.
+</p>
+<p class = taille75>
+Périodiquement, le garbage collector (gc)
+vérifie le nombre de références pour chaque objet (variables, liste contenant l'objets etc.)
+et recycle les objets inaccessibles (recycle la mémoire de l'objet).
+</p>
+<p class = taille75>
+Utilisation explicite par le programmeur :
+</p>
+<pre><code class="python" data-trim data-line-numbers>
+>>>	import gc
+>>>	gc.collect()# retourne nbr objets inaccessibles et les efface
+12
+>>> gc.collect()
+0
+</code></pre>
+				</section>
+				<section>
+				Le <cdb>gc</cdb> évite de surcharger la mémoire
+				avec des objets qui deviennent inatteignables lors du déroulement du code.<br />
+				</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->				
+<section>
+				<section>
+				<h3>3.17 – Garbage collector : Exemple</h3>
+				<p>
+				Considérons la structure en arbre suivante
+				 (qui n’est pas une structure de classes), on veut la représenter à l’aide d’instances d’une seule classe:
+				 </p>
+			<img src="images/arbre.png" alt="UML Figure" width="600"  align="center">
+				</section>
+				<section>
+				<p>
+				L'arbre représente une hiérarchie de direction ou des secteurs dans une entreprise,
+				chaque noeud possède un noeud parent et plusieurs noeuds enfants. On va donc créer une classe 
+				avec ces deux attributs : un noeud parent <cdb>self.sup</cdb> et une liste 
+				de noeuds enfant <cdb>self.inf</cdb>.
+				</p>
+				<p>
+				 Chaque noeud de l'arbre sera une instance de cette classe.
+				 </p>
+				</section>
+				
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+
+	<section>
+		<h3>3.17 – Garbage collector : Exemple</h3>
+		<p class = taille75>La classe <cr>Niv</cr> représente un noeud de l'arbre :</p>
+		<pre><code class="python" data-trim data-line-numbers style="font-size:18px;">
+class Niv():
+	compteur = 0
+	def __init__(self, nom):
+		self.nom = nom
+		self.sup = None #par défaut pas de supérieur
+		self.inf = []   #par défaut liste vide de subalternes
+		Niv.compteur += 1
+
+	@staticmethod
+	def nombreinstances() : return Niv.compteur
+
+	def addNiv(self, niveau):
+	niveau.sup = self
+	self.inf.append(niveau)
+
+	def organigramme(self):
+		for f in self.inf:
+			print self.nom, "dirige ", f.nom
+			f.organigramme()
+</code></pre>
+	</section>
+	<section>
+	<ul>
+ 	<li>L'attribut <cdb>nom</cdb> contient le nom du noeud (p. ex "dir").</li>
+	<li>On déclare une méthode de classe pour compter les instances (avec <mycode style="color:lightblue;">@staticmethod</mycode>) 
+	comme dans la classe Figure.</li>
+	<li>Ligne 12: la fonction <ctomato> addNiv</ctomato> permet d'ajouter un élément dans la liste des enfants.
+	Le parent de ce noeud  enfant est donc le noeud  qui rajoute cet enfant, représenté 
+	par la variable <cdb>self</cdb> (ligne 13)</li>
+		</ul>
+	</section>
+	<section>
+	<ul>
+	<li>Ligne 16 : la méthode <ctomato>organigramme</ctomato> permet d'afficher l'arbre par récurrence
+	selon l'algorithme ci-dessous : </li>
+	</ul><!-- data-line-numbers -->
+	<pre><code class="python" data-trim  style="font-size:25px;"> 
+def organigramme(self):
+	parcours tout les enfant du noeud self:
+		imprime chaque enfant
+		pour chaque enfant rapelle organigramme()
+</code></pre>
+<ul>
+	<li> L'appel récursif permet d'afficher le sous arbre à partir d'un enfant.</li>
+	</ul>
+	</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<img src="images/arbre.png" alt="UML Figure" width="400"  align="right" class="my-right">
+<h3>3.17 – Garbage collector : Exemple</h3>
+<p class = taille75 align = left>On peut maintenant créer les instances correspondant au schéma de l'arbre :  </p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:18px;">
+>>> pdg = Niv("dir")
+>>> pdg.organigramme()
+>>> pdg.addNiv(Niv("export"))
+>>> pdg.addNiv(Niv("natl"))
+>>> pdg.addNiv(Niv("assist"))
+>>> print pdg.inf
+[<__main__.Niv instance at 0x10a454ea8>, <__main__.Niv instance at 0x10a45a440>,
+<__main__.Niv instance at 0x10a45a7a0>]
+>>> pdg.organigramme()
+dir dirige  export
+dir dirige  natl
+dir dirige  assist
+</code></pre>
+<p class = taille75 align  =left> suite du code slide ci-dessous...</p>
+</section>
+<section>
+<p class = taille75 align = left> ...suite</p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:18px;">
+>>> pdg.inf[0].addNiv(Niv("Am"))
+>>> pdg.inf[0].addNiv(Niv("Asia"))
+>>> pdg.inf[0].addNiv(Niv("Eu"))
+>>> pdg.inf[0].addNiv(Niv("RoW"))
+>>> pdg.inf[2].addNiv(Niv("CustSat"))
+>>> pdg.inf[2].addNiv(Niv("Repair"))
+>>> pdg.inf[2].inf[1].addNiv(Niv("site"))
+>>> pdg.inf[2].inf[1].addNiv(Niv("remote"))
+>>> pdg.organigramme()
+dir dirige  export
+export dirige  Am
+export dirige  Asia
+export dirige  Eu
+export dirige  RoW
+dir dirige  natl
+dir dirige  assist
+assist dirige  CustSat
+assist dirige  Repair
+Repair dirige  site
+Repair dirige  remote
+</code></pre>
+</section>
+
+<section>
+<p align = left>Explications : </p>
+<ul>
+<li>On créait le noeud racine de l'arbre <ctomato>pdg = Niv("dir")</ctomato></li>
+<li>On rajoute les noeuds enfants de pdg avec des commandes du type : <ctomato>pdg.addNiv(Niv("export"))</ctomato></li>
+<li>Pour chacun de ces enfants on rajoute leurs enfants. Par exemple <ctomato>pdg.inf[0].addNiv(Niv("Am"))</ctomato>
+ajoute le noeud <ctomato>"Am"</ctomato> à <ctomato>pdg.inf[0]</ctomato>  (le premier enfant de <ctomato>pdg</ctomato>).</li>
+<li>On continue jusqu'à avoir créé tout l'arbre...</li>
+</ul>
+</section>
+<section>
+<ul>
+<li>Remarque : cette manière de construire l'arbre n'est pas très pratique,
+ il serait plus facile de lire un fichier qui contient les informations de l'arbre de manière structurées</li>
+</ul>
+</section>
+
+<section>
+	<ul>
+	<li>Exercice : créez votre propre méthode d'affichage de l'arbre, ajoutez-la au code et testez-la.
+	Indications : Vous pouvez copier le code des slides ou téléchargez celui en lien ci-dessous. Vous pouvez afficher 
+	l'arbre en écrivant un noeud par ligne en précisant <cdb>n</cdb>, la profondeur du noeud dans l'arbre (0 pour la racine, 1 pour ces enfants etc), 
+	ou encore en rajoutant <cdb>n</cdb> tabulations avant le nom du noeud. 
+	</li>
+	<!-- 
+<li>Exemple de code d'affichage : </li>
+<pre><code class="python" data-trim data-line-numbers style="font-size:18px;">
+def organigramme2(self, depth = 0):
+	if(depth==0):
+		print "0 "+ self.nom
+		for f in self.inf:
+			print (depth+1)*"   " + str(depth+1)+" "+ f.nom
+			f.organigramme2(depth+1)
+</code></pre>
+ -->
+	<li><a href = "codesPython/niv.py">Lien vers le code complet niv.py</a> qui 
+	se trouve dans le dossier "codesPython/" des slides. </li>
+	</ul>
+	</section>
+
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<img src="images/arbre.png" alt="UML Figure" width="300"  align="right" class="my-right" >
+<h3>3.17 – Garbage collector : Exemple</h3>
+<p class = taille75 align  =left> On va tester le "garbage collector"</p>
+<p style = "margin-bottom:50px;"></p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:18px;">
+>>> import gc
+>>> pdg.nombreinstances()
+12
+>>> 
+>>> pdg.inf[1].nom
+'natl'
+>>> del pdg.inf[1]
+>>> print gc.collect(), "objets inatteignables"
+0 objets inatteignables
+>>> # parce que 'natl' n'avait pas de subalternes
+>>> pdg.inf[1].nom
+"assist"
+>>> del pdg.inf[1]
+#gc.collect efface les objets inatteignables et renvoie leur nombre
+>>> print gc.collect(), "objets inatteignables"
+15 objets inatteignables
+# parce que 'assist' a été effacé avec la liste des subalternes par
+#l'appel de gc.collect()
+>>> print gc.collect(), "objets inatteignables"
+0 objets inatteignables
+</code></pre>
+</section>
+<section>
+<ul>
+	<li>Ligne 1 : On importe le module gc</li>
+	<li>Ligne 7 : On efface le deuxième enfant de "pdg", comme il ne possède pas d'enfant,
+	 aucun noeud ne sera rendu inatteignable</li>
+	<li>Ligne 8 : la commande <ctomato>gc.collect()</ctomato> force le recyclage de la mémoire
+	et renvoie le nombre d'objets qui étaient inatteignables. Il y en a 0.</li>
+	<li>Ligne 13 : Par contre si on efface un noeud qui possède des sous-noeuds <ctomato>pdg.inf[1]</ctomato>,
+	 ces derniers ne seront plus atteignables. </li>
+	
+</ul>	
+</section>
+<section>
+<ul>
+	<li>Ligne 15-16 : L'appel <ctomato>print gc.collect()</ctomato> va bien afficher
+	 un certain nombre d'objets inatteignables :  15.</li>
+	 <li>Les 15 objets inatteignables sont comptabilisés de manière compliquée 
+	 (en prenant en compte les attributs).</li>
+	 <li> Un deuxième appel à <ctomato>gc.collect()</ctomato> affiche bien zéro puisque l'appel précédent a forcé
+	 le "nettoyage" de la mémoire.
+	 </li>
+</ul>
+</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<h3>3.18 – Comparaison d'objets</h3>
+<p>Les comparaisons entre objets peuvent s'avérer compliquées, par défaut python compare les adresses mémoire.</p>
+<p align = left>Lorsqu'on déclare un objet: 	<cdb>objet = Classe(...)</cdb><br />
+Python crée une référence vers l'objet créé</p>
+<img src="images/memoireCopy.png" alt="UML Figure" width="600"  align="center">
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+
+<section>
+<h3>3.18 – Comparaison d'objets</h3>
+<p class = taille75>Deux objets  <cg>obj1</cg>  et  <cg>obj2</cg> sont égaux, i.e. 
+<cg>obj1</cg> <cr>==</cr> <cg>obj2</cg> est vrai si:</p>
+<img src="images/objetEgaux.png" alt="UML Figure" width="500"  align="center">
+<p class = taille75>si  les variables <cg>obj1</cg>  et  <cg>obj2</cg> contiennent la même référence,
+ et donc sont liés au même endroit en mémoire qui contient les
+ attributs de l'objet (il n'y a donc qu'un seul objet).</p>
+ <p class = taille75>Problème : comment déterminer
+  si le contenu de  <cg>obj1</cg> est le même que le contenu de  <cg>obj2</cg>, si ces deux objets sont différents ?</p>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<h3>3.18 – Comparaison d'objets</h3>
+<p>La notion d’égalité est différente de la notion d’identité
+</p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:25px;">
+>>> figA = figB = Figure(3, 4)
+>>> figC = Figure(3, 4)
+>>>	
+>>> figA == figB    # sont bien identiques (références)
+True
+>>>	
+>>> figA == figC    # sont bien égaux (valeurs)
+False               # mais euh ?!
+>>>	
+</pre></code>
+</section>
+<section>
+<ul>
+	<li>Ligne 7 : La comparaison de deux objets différents renvoie la valeur <cdb>False</cdb> 
+	car cela compare les deux adresses mémoire qui sont différentes.</li>
+	<li><cg>figA</cg> et <cg>figC</cg> on les deux été construit à l'aide du constructeur
+	 <cg>Figure()</cg> et donc pour chacun un objet a été créé en mémoire. Alors que <cg>figB</cg> 
+	 est juste une copie de l'adresse de <cg>figA</cg>. </li>
+</ul>	
+</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<h3>3.18 – Comparaison d'objets</h3>
+<p class = taille75>Représentation de la mémoire après le code ci-dessous:</p>
+
+<pre><code class="python" data-trim data-line-numbers style="font-size:25px;">
+>>> figA = figB = Figure(3, 4)
+>>> figC = Figure(3, 4)
+</pre></code>
+<p style="margin-bottom:10px"></p>
+<img src="images/memoireFigA.png" alt="UML Figure" width="700"  align="center">
+</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+
+<h3>3.18 – Comparaison d'objets<img src="images/umlFigure2.png" alt="UML Figure" width="180"  align="right" class="my-right"></h3>
+<p class = taille75>A priori ce résultat est embêtant ! La solution est de créer une méthode 
+ <cg> egal() </cg> dans la classe <cg>Figure</cg>:</p>
+ <pre><code class="python" data-trim data-line-numbers style="font-size:25px;">
+class Figure():
+	def egal(self, autre):
+		if isinstance(autre, Figure) :
+			return self.nom==autre.nom \
+			and self.largeur==autre.largeur \ 
+			and self.hauteur==autre.hauteur
+		else:
+			return False
+figA = figB = Figure(3, 4)
+figC = Figure(3, 4)
+figA == figC#-> False
+figA.egal(figC) #->True
+</pre></code>
+</section>
+<section>
+<ul>
+	<li>La fonction <ctomato>egal()</ctomato> compare tout les attributs des deux objets et 
+	renvoie <cg>True</cg> si ils sont tous égaux.</li>
+</ul>
+</section>
+</section>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<h3>3.18 – Comparaison d'objets</h3>
+<p>Python permet la redéfinition  des opérations de comparaison entre objets dans chaque classe.</p>
+<table style= "font-size: 75%">
+  				<tr ><th >Opérateur </th><th >Méthode correspondante</th></tr>
+  				
+					<tr ><td> < </th><td >__lt__(self, other)</th></tr>
+					<tr ><td> <= </th><td >__le__(self, other)</th></tr>
+					<tr ><td> == </th><td >__eq__(self, other)</th></tr>
+					<tr ><td> != </th><td >__ne__(self, other)</th></tr>
+					<tr ><td> >= </th><td >__ge__(self, other)</th></tr>
+					<tr ><td> > </th><td >__gt__(self, other)</th></tr>
+</table>					
+  				    				  
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+
+<section>
+<h3>3.18 – Comparaison d'objets</h3>
+<p class = taille75>On peut <blue>surcharger</blue> la méthode d'implémentation standard de l'égalité
+   <cg>__eq__()</cg> dans la classe  <cg>Figure</cg>. On remplace <cg>egal</cg> par <cg>__eq__</cg>: </p>
+   <pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+class Figure():
+	...
+	def __eq__(self, autre):
+		if isinstance(autre, Figure) :
+			return self.nom==autre.nom)\
+			and self.largeur==autre.largeur)\ 
+			and self.hauteur==autre.hauteur
+		else:
+			return False
+figA = figB = Figure(3, 4)
+figC = Figure(3, 4)
+figA == figC  #-> True (car 	appel à la fonction __eq__)
+</pre></code>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<h3>3.19 – Représentation textuelle</h3>
+<p class = taille50>Imprimer un objet avec <ctomato>print</ctomato> renvoie son adresse mémoire :</p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+figA = Rectangle(3,4)
+print figA
+#-> <__main__.Rectangle instance at 0x102b9d908>
+</pre></code>
+<p class = taille50>On peut également surcharger la méthode d'implémentation standard <ctomato>__str__()</ctomato>
+dans la classe  <cg>Figure</cg>. Celle ci est appelée dans les fonctions <ctomato>str()</ctomato>,
+<ctomato>print()</ctomato> (et <ctomato>format()</ctomato>).</p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+class Figure():
+	...
+	def __str__(self):
+		return self.nom + " de " + \
+		str(self.largeur) + " x " + str(self.hauteur)
+figA = Rectangle(3,4)
+str(figA)#-> 'Rectangle de 3 x 4'
+print figA # print fait appel a str()
+#->Rectangle de 3 x 4
+</pre></code>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<!-- 
+<figure ><img src="images/symboleFichier.png" alt="UML Figure" width="100" alt = "fraction.py" align="right" class = "my-right">
+<figcaption><small>fraction.py</small></figcaption></figure>
+ -->
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75>On va écrire un module appelé  <cg>fraction.py</cg>  qui permet d'effectuer des opérations élémentaires 
+( +,  - ,  * , / ) sur des fractions positives.</p> <p class = taille50>A noter qu'il est trivial de considérer 
+également le cas des fractions négatives, mais cela complique le code et n'amène rien de plus.</p>
+
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+# -*- coding: utf-8 -*-
+class Fraction():
+	# constructeur et attributs
+	def __init__(self, num = 0, den = 1):
+		self.num = num
+		if (den == 0): 
+			erreur("Dénominateur nul") #fonction d'erreur
+			self.den = den
+	def __str__(self):
+		return str(self.num) + "/" + str(self.den)
+</pre></code>
+</section>
+<section>
+<ul>
+	<li>
+	On créait une classe <ctomato>Fraction</ctomato> avec deux attrbuts: le numérateur
+	 et le dénominateur de la fraction : <cdb>num</cdb> et <cdb>den</cdb>.
+	<li>Si le dénominateur est nul, on appelle une fonction <cdb>erreur</cdb> pour afficher l'erreur. Cette fonction sera définie plus tard</li>
+	</li>
+	<li>On créait une fonction <ctomato>__str__</ctomato> pour afficher l'objet plus facilement.</li>	
+	
+</ul>
+</section>
+
+</section>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75>Des fonctions de service qui peuvent être utilisées à divers endroits du code du module, elles sont
+ habituellement déclarées au début du module, <b>avant la définition</b> des classes et de leur méthodes.
+</p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+# une fonction qui affiche un message d'erreur et
+# interrompt l'éxecution
+def erreur(message):
+	print "Erreur: " + message
+	from sys import exit
+	exit()
+</pre></code>
+</section>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75>On créait une fonction <ctomato>plus</ctomato> pour additionner deux fractions
+et renvoyer le résultat sous forme d'une fraction simplifiée : </p>
+	<div style = "font-size:75%">
+					\[\frac{a}{b}+\frac{c}{d} = \frac{ad+bc}{bd}\]
+	</div>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+def plus(self, f):
+	resultat = Fraction(self.num * f.den + self.den * f.num, \
+	self.den * f.den)
+	return resultat.simplifier() 
+# simplifier est une methode de service pour avoir 
+# des nombres rationnels en cherchant le pgcd
+</pre></code>
+<p class = taille75>A la ligne 2 on construit un nouvel objet <cdb>Fraction</cdb> avec les attributs <cdb>num</cdb> et <cdb>den</cdb> 
+calculés selon la formule d'addition des fractions.</p>
+</section>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75>On créait une fonction <ctomato>moins</ctomato> de la même manière : </p>
+	<div style = "font-size:75%">
+					\[\frac{a}{b}-\frac{c}{d} = \frac{ad-bc}{bd}\]
+	</div>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+def moins(self, f):
+	resultat = Fraction(self.num * f.den - self.den * f.num, \
+	self.den * f.den)
+	if (resultat.num < 0):
+		# changer de signe avant de simplifier
+		resultat.num = - resultat.num
+		resultat = resultat.simplifier()
+		resultat.num = - resultat.num
+		return resultat
+	else: 
+		return resultat.simplifier()
+</pre></code>
+</section>
+<section>
+<ul>
+<li>Lignes 4-9: si la fraction est négative, on change le signe de la fraction, car la fonction <cdb>simplifier</cdb>
+prend en argument des fractions positives.
+</li>
+</ul>
+</section>
+</section>
+
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75 align = "left">On créait les fonctions <ctomato>fois</ctomato> et <ctomato>div</ctomato> : </p>
+	<div style = "font-size:100%" align = "right">
+		\[\frac{a}{b} \cdot \frac{c}{d} = \frac{a\cdot c}{b\cdot d} \quad\mathrm{;}\quad \frac{\frac{a}{b}}{\frac{c}{d}} = \frac{a\cdot d}{b\cdot c}\]
+	</div>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+def fois(self, f):
+	resultat = Fraction(self.num * f.num, self.den * f.den)
+	return resultat.simplifier() 
+	
+def div(self, f):
+	resultat = Fraction(self.num * f.den, self.den * f.num)
+	return resultat.simplifier()
+</pre></code>
+</section>
+<section>
+<ul>
+<li>Cette fois pas de problèmes de nombres négatifs avec les multiplications et divisions.
+</li>
+</ul>
+</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75>Calcul du PGCD (Plus Grand Commun Diviseur):
+on va utiliser l'algorithme d'Euclide (323-283 avJ.C.)</p>
+<p class = taille75>Calculer le PGCD de  <blue>a</blue> et <blue>b</blue> ∈ N : </p>
+<ul class = taille75>
+<li>a = b   &rArr;  PGCD est <blue>a</blue> (ou <blue>b</blue>)</li>
+<li>a > b  &rArr;   <blue>a</blue> = x<blue>b</blue> + <blue>r</blue> <br />
+si <blue>r</blue> &ne; <blue>0</blue>, il faut chercher maintenant un diviseur commun entre <blue>b</blue> et <blue>r</blue>
+   &rArr;  on est ramené au problème précédent ! 
+   Si <blue>r</blue> == <blue>0</blue> alors <blue>b</blue> divise <blue>a</blue>, <blue>b</blue> est donc le pgcd.
+</li> 
+<li><blue>a</blue> < <blue>b</blue>  &rArr;    <blue>b</blue> = x<blue>a</blue> + <blue>r</blue> <br />
+   Même cas que ci-dessus avec permutations  <blue>a</blue> &rarr; <blue>b</blue>  et  <blue>b</blue> &rarr; <blue>a</blue>.</li>
+</ul>
+</section>
+<section id = "explicationgeom">
+<p><blue>Explication de l'algorithme d'Euclide.</blue></p>
+<figure style = "margin-bottom: 0.5em;" >
+<img src="images/euclide.png" alt="UML Figure" width="900"  align="center">
+<figcaption  class = taille50> wikipedia.org/wiki/Algorithme_d'Euclide</figcaption>
+</figure>
+<ul class = taille75>
+<li>On peut représenter l'algorithme d'Euclide géométriquement en prenant <blue>a</blue> et 
+<blue>b</blue> comme les deux cotés d'un rectangle. On cherche à subdiviser le rectangle avec
+ des carrés identiques de la plus grande taille possible (et de côté $\in ~\mathbb{N}$). Le côté de ce carré sera le PGDC, ici 3.</li>
+</ul>
+</section>
+<section>
+<ul class = taille75>
+ <li>Trouver le reste de la division de <blue>a</blue> par <blue>b</blue> revient à trouver 
+ la dimension du nouveau rectangle (par exemple 6=21-15) obtenu après avoir enlevé le plus possible 
+ de carrés de coté <blue>b</blue>.</li>
+ <li>On voit sur le dessin que le nouveau rectangle (15x6) possède toujours un coté de la taille du carré enlevé (15x15), donc 
+ un petit carré (ici 3x3) qui peut couvrir cette surface  pourra aussi couvrir le carré (15x15) et donc tout le rectangle (15x21).</li>
+<li> On doit appliquer l'algorithme au nouveau rectangle (15x6). &rArr; c'est une récursion.
+<li>Si le rectangle est entièrement rempli par des petits carrés c'est la fin de l'algorithme, on renvoie le côté de ce carré.</li>
+</ul>
+</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+<section>
+<section>
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75 align = left>Remarques :</p>
+<ol class = taille75>
+<li>L'opérateur modulo <blue>n</blue>%<blue>m</blue> 
+donne reste de la division de <blue>n</blue> par <blue>m</blue></li>
+<li>$ n\% m =0 &hArr; n = \underbrace{m+m+\dots +m}_{k~\mathrm{fois}}$</li>
+<li> on écrit une fonction récursive   <ctomato>pgcd(a, b)</ctomato> qui est déclarée au début
+ du module (juste après la fonction <ctomato>erreur</ctomato>) en suivant l'algorithme d'Euclide: </li>
+</ol>
+
+</section>
+<section>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+def pgcd(a, b):
+	if b==a:
+		return a
+	if b > a:
+		if b % a == 0:
+			return a
+		else:
+			return pgcd(b % a, a)
+	else:
+		if a % b == 0:
+			return b
+		else:
+			return pgcd(b, a % b)
+</pre></code>
+<ul class = taille75>
+<li> Notez que <cdb>a==b</cdb> implique <cdb>a%b=0</cdb> (ou <cdb>b%a=0</cdb> si <cdb>a > b</cdb> ), donc on peut effacer
+ la première condition dans le code ci-dessus.</li>
+</ul>
+</section>
+<section>
+<ul>
+<li>A la ligne 4 on teste si <cdb>a>b</cdb> afin de calculer le reste de la division avec le modulo <cdb>%</cdb>.
+<li>Cas <cdb>b&gt;a</cdb> : si <cdb>b%a==0</cdb>, <cdb>a</cdb> divise <cdb>b</cdb> et donc <cdb>a</cdb> est le pgdc.</li>
+<li>Sinon on rapelle la fonction <ctomato>pgcd(r,a)</ctomato>. Cela revient à chercher dans le nouveau rectangle un découpage par des carrés.</li>
+<li>Cas <cdb> b&lt;a </cdb> : identique mais avec une permutation de <cdb>a</cdb> et <cdb>b</cdb>.</li>
+</ul>
+</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+
+<section>
+<section>
+<h3>3.20 – Exemple: module <code>fraction.py</code></h3>
+<p class = taille75>La méthode   <ctomato>simplifier()</ctomato> s'écrit alors:</p>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+def simplifier(self):
+	p = pgcd(self.num, self.den)
+	self.num = self.num / p
+	self.den = self.den / p
+	return self
+#...	
+a = Fraction(5,11) 
+b = Fraction(3,7) 
+p = a.plus(b)
+m = a.moins(b)
+f = a.fois(b)
+d = a.div(b)
+print str(a), " + ", str(b), " = " , str(p)
+# -> 5/11  +  3/7  =  68/77
+>>> print str(a), " / ", str(b), " = " , str(d)
+# -> 5/11  /  3/7  =  35/33
+</pre></code>
+</section>
+<section>
+<ul>
+<li>La méthode <ctomato>simplifier()</ctomato> permet de simplifier la fraction en divisant le numérateur
+et le dénominateur par le pgdc.</li>
+<li>Vous trouvez le code <a href = "codesPython/fractions.py">ici</a></li>
+<li>Exercice : on peut compléter le code pour qu'on puisse écrire des additions du type <cdb>f3 = f1 + f2</cdb>.
+Pour cela on utilise la fonction spéciale <cdb>__add__(self, other)</cdb>, il suffit de copier
+la fonction <cdb>plus(self, f)</cdb> et de remplacer <cdb>plus</cdb> par <cdb>__add__</cdb>.
+ 
+</ul>
+</section>
+</section>
+<!-- ------------------------------------------------------------------------------------ -->
+
+
+<!--TEMPLATEs ------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- 
+<section>
+<img src="images/memoireFigA.png" alt="UML Figure" width="700"  align="center">
+<h3></h3>
+<p class = taille75></p>
+<div style = "font-size: 75%">
+					\[\frac{a}{b}+\frac{c}{d} = \frac{ad+bc}{bd}\]
+	</div>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+</pre></code>
+</section>
+ -->
+
+<!-- Avec explications------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- 
+<section>
+<section>
+<img src="images/memoireFigA.png" alt="UML Figure" width="700"  align="center">
+<h3></h3>
+<p class = taille75></p>
+<div style = "font-size: 75%">
+					\[\frac{a}{b}+\frac{c}{d} = \frac{ad+bc}{bd}\]
+	</div>
+<pre><code class="python" data-trim data-line-numbers style="font-size:20px;">
+</pre></code>
+</section>
+<section>
+<ul>
+<li></li>
+</ul>
+</section>
+</section>
+ -->
+
+
+
+<!-- ------------------------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------------------------ -->
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			controls: true,
+				progress: true,
+				center: true,
+				hash: true,
+				math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
+						}
+					}
+				},
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/search/search.js', async: true },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true },
+				]
+			});
+			Reveal.configure({ slideNumber: true });  
+			Reveal.configure({ slideNumber: 'h/v' });
+		</script>
+	</body>
+</html>

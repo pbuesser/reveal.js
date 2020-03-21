@@ -19,6 +19,7 @@ red{color: red}
 		cb{color: blue; font-family: "courier"}
 		cg{color: green; font-family: "courier"}
 		cdb{color: darkblue; font-family: "courier"}
+		cblack{color: black; font-family: "courier"}
 		ctomato{color: tomato;  font-family: "courier"}
 /* 		mycode est supposé garder la couleur de base: */
 		mycode{font-family: "courier"; text-align: "left"}
@@ -49,12 +50,51 @@ display:inline-block;
 }
 
 
-
-
 .align-left {
 text-align: left;
 }
 
+
+
+/* utile pour le placemnt d'un texte sous une image: */
+
+.images {
+    text-align:left;
+    align:right;
+}
+/* 
+.images img {
+    width:150px;
+     height:100px; 
+}
+ */
+.images div {
+/*     width:150px; */
+    text-align:center;
+}
+.images div span {
+    display:block;
+}
+.margin_right {
+    margin-right:20px;
+}
+.margin_left {
+    margin-left:50px;
+}
+.margin_top {
+    margin-left:10px;
+}
+.margin_bottom {
+    margin-left:10px;
+}
+.float {
+    float:right;
+}
+.clear {
+    clear:both;
+    height:0;
+    width:0;
+}
 
 
 
@@ -67,6 +107,7 @@ text-align: left;
 .taille100{font-size: 100%}
 .taille75{font-size: 75%}
 .taille50{font-size: 50%}
+.taille25{font-size: 25%}
 
 
 /*********************************************
